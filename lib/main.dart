@@ -1,3 +1,4 @@
+import 'package:fluter_verify_mobile_number/Screens/activities_list_item.dart';
 import 'package:fluter_verify_mobile_number/Screens/navigation_drawer.dart';
 import 'package:fluter_verify_mobile_number/Screens/sign_in_with_mob_num.dart';
 import 'package:fluter_verify_mobile_number/Screens/sign_up..dart';
@@ -15,9 +16,99 @@ class MyApp extends StatelessWidget {
         unselectedWidgetColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      // home: SignInWithMobileNum(),
-      // home: SignUp(),
-      home: NavDrawerHomePage(),
+      home: ScreenStack(),
+    );
+  }
+}
+
+class ScreenStack extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        RaisedButton(
+            color: Color(0XFFFDCA44),
+            textColor: Color(0XFF231F20),
+            child: Text(
+              "Sign In",
+              style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0),
+            ),
+            padding: EdgeInsets.fromLTRB(35.0, 10.0, 35.0, 10.0),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SignInWithMobileNum(),
+                  ));
+            }
+        ),
+        SizedBox(height: 15.0,),
+        RaisedButton(
+            color: Color(0XFFFDCA44),
+            textColor: Color(0XFF231F20),
+            child: Text(
+              "Sign Up",
+              style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0),
+            ),
+            padding: EdgeInsets.fromLTRB(35.0, 10.0, 35.0, 10.0),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SignUp(),
+                  ));
+            }
+        ),
+        SizedBox(height: 15.0,),
+        RaisedButton(
+            color: Color(0XFFFDCA44),
+            textColor: Color(0XFF231F20),
+            child: Text(
+              "Navigation Drawer",
+              style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0),
+            ),
+            padding: EdgeInsets.fromLTRB(35.0, 10.0, 35.0, 10.0),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => NavDrawerHomePage(),
+                  ));
+            }
+        ),
+        SizedBox(height: 15.0,),
+        RaisedButton(
+            color: Color(0XFFFDCA44),
+            textColor: Color(0XFF231F20),
+            child: Text(
+              "Activity List Item",
+              style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0),
+            ),
+            padding: EdgeInsets.fromLTRB(35.0, 10.0, 35.0, 10.0),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ActivitiesListItem(),
+                  ));
+            }
+        ),
+        SizedBox(height: 15.0,)
+
+      ],
     );
   }
 }
