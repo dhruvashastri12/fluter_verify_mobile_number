@@ -106,6 +106,26 @@ class ScreenStack extends StatelessWidget {
                   ));
             }
         ),
+        SizedBox(height: 15.0,),
+        RaisedButton(
+            color: Color(0XFFFDCA44),
+            textColor: Color(0XFF231F20),
+            child: Text(
+              "Intro Pageview",
+              style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0),
+            ),
+            padding: EdgeInsets.fromLTRB(35.0, 10.0, 35.0, 10.0),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ActivitiesListItem(),
+                  ));
+            }
+        ),
         SizedBox(height: 15.0,)
 
       ],
