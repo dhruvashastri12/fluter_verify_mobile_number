@@ -1,7 +1,9 @@
 import 'package:fluter_verify_mobile_number/Screens/activities_list_item.dart';
+import 'package:fluter_verify_mobile_number/Screens/intro_pageview.dart';
 import 'package:fluter_verify_mobile_number/Screens/navigation_drawer.dart';
 import 'package:fluter_verify_mobile_number/Screens/sign_in_with_mob_num.dart';
 import 'package:fluter_verify_mobile_number/Screens/sign_up..dart';
+import 'package:fluter_verify_mobile_number/Screens/verify_otp.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -71,6 +73,26 @@ class ScreenStack extends StatelessWidget {
             color: Color(0XFFFDCA44),
             textColor: Color(0XFF231F20),
             child: Text(
+              "Verify OTP",
+              style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0),
+            ),
+            padding: EdgeInsets.fromLTRB(35.0, 10.0, 35.0, 10.0),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => VerifyOTP(),
+                  ));
+            }
+        ),
+        SizedBox(height: 15.0,),
+        RaisedButton(
+            color: Color(0XFFFDCA44),
+            textColor: Color(0XFF231F20),
+            child: Text(
               "Navigation Drawer",
               style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
             ),
@@ -122,7 +144,7 @@ class ScreenStack extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ActivitiesListItem(),
+                    builder: (context) => IntroPageview(),
                   ));
             }
         ),
