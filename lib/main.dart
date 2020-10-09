@@ -1,3 +1,4 @@
+import 'package:fluter_verify_mobile_number/Screens/activities_list.dart';
 import 'package:fluter_verify_mobile_number/Screens/activities_list_item.dart';
 import 'package:fluter_verify_mobile_number/Screens/intro_pageview.dart';
 import 'package:fluter_verify_mobile_number/Screens/navigation_drawer.dart';
@@ -124,7 +125,7 @@ class ScreenStack extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ActivitiesListItem(),
+                    builder: (context) => ActivitiesList(),
                   ));
             }
         ),
